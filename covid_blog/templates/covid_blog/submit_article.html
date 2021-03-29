@@ -1,0 +1,23 @@
+<h1> Add New Article </h1>
+
+<form action = "{% url 'covid_blog:success' %}" method = "post">
+{% csrf_token %}
+	<!--Title-->
+
+	<label for="title">Title:</label><br>
+	<input type="text" name="title"> <br>
+
+	<!--Article details-->
+	<label for="details">Article Details:</label><br>
+	<textarea name="details" rows="4" cols="50"></textarea><br>
+
+	<!--Date Input-->
+	<label for="pubdate">Published date:</label><br>
+	<input type="date" name="pubdate" value="2021-02-18"><br>
+
+
+	<!--Save Button-->
+	<input type="submit" value="Save">
+
+	
+</form>
